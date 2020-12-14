@@ -36,7 +36,6 @@ import { WebGLState } from './webgl/WebGLState.js';
 import { WebGLTextures } from './webgl/WebGLTextures.js';
 import { WebGLUniforms } from './webgl/WebGLUniforms.js';
 import { WebGLUtils } from './webgl/WebGLUtils.js';
-import { WebXRManager } from './webxr/WebXRManager.js';
 import { WebGLMaterials } from "./webgl/WebGLMaterials.js";
 
 function WebGLRenderer( parameters ) {
@@ -318,7 +317,7 @@ function WebGLRenderer( parameters ) {
 
 	// xr
 
-	const xr = new WebXRManager( _this, _gl );
+	const xr = { dispose: () => {}, setAnimationLoop: () => {} }; // noop for all used methods
 
 	this.xr = xr;
 

@@ -221,8 +221,6 @@
     "src/renderers/webgl/WebGLTextures.js",
     "src/renderers/webgl/WebGLUniforms.js",
     "src/renderers/webgl/WebGLUtils.js",
-    "src/renderers/webxr/WebXRController.js",
-    "src/renderers/webxr/WebXRManager.js",
     "src/scenes/Scene.js",
     "src/textures/CubeTexture.js",
     "src/textures/DataTexture2DArray.js",
