@@ -3,6 +3,36 @@ import { WebGLShader } from './WebGLShader.js';
 
 let programIdCount = 0;
 
+function addLineNumbers( string ) {
+
+	const lines = string.split( '\n' );
+
+	for ( let i = 0; i < lines.length; i ++ ) {
+
+		lines[ i ] = ( i + 1 ) + ': ' + lines[ i ];
+
+	}
+
+	return lines.join( '\n' );
+
+}
+
+function getShaderErrors( gl, shader, type ) {
+
+	const status = gl.getShaderParameter( shader, gl.COMPILE_STATUS );
+	const log = gl.getShaderInfoLog( shader ).trim();
+
+	if ( status && log === '' ) return '';
+
+	// --enable-privileged-webgl-extension
+	// console.log( '**' + type + '**', gl.getExtension( 'WEBGL_debug_shaders' ).getTranslatedShaderSource( shader ) );
+
+	const source = gl.getShaderSource( shader );
+
+	return 'THREE.WebGLShader: gl.getShaderInfoLog() ' + type + '\n' + log + addLineNumbers( source );
+
+}
+
 function fetchAttributeLocations( gl, program ) {
 
 	const attributes = {};
