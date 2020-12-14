@@ -7,7 +7,7 @@
   "types": "src/Three.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mrdoob/three.js"
+    "url": "https://github.com/ExodusMovement/three.js"
   },
   "files": [
     "LICENSE",
@@ -291,7 +291,7 @@
   "author": "mrdoob",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mrdoob/three.js/issues"
+    "url": "https://github.com/ExodusMovement/three.js/issues"
   },
   "homepage": "https://threejs.org/",
   "devDependencies": {
