@@ -10,9 +10,6 @@ import { Vector4 } from '../../math/Vector4.js';
 import { Vector2 } from '../../math/Vector2.js';
 import { Frustum } from '../../math/Frustum.js';
 
-import vsm_frag from '../shaders/ShaderLib/vsm_frag.glsl.js';
-import vsm_vert from '../shaders/ShaderLib/vsm_vert.glsl.js';
-
 function WebGLShadowMap( _renderer, _objects, maxTextureSize ) {
 
 	let _frustum = new Frustum();
@@ -42,9 +39,9 @@ function WebGLShadowMap( _renderer, _objects, maxTextureSize ) {
 			radius: { value: 4.0 }
 		},
 
-		vertexShader: vsm_vert,
+		vertexShader: null,
 
-		fragmentShader: vsm_frag
+		fragmentShader: null
 
 	} );
 

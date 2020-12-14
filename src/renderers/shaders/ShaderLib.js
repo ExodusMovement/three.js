@@ -1,10 +1,11 @@
-import { ShaderChunk } from './ShaderChunk.js';
 import { mergeUniforms } from './UniformsUtils.js';
 import { Vector2 } from '../../math/Vector2.js';
 import { Vector3 } from '../../math/Vector3.js';
 import { UniformsLib } from './UniformsLib.js';
 import { Color } from '../../math/Color.js';
 import { Matrix3 } from '../../math/Matrix3.js';
+
+const ShaderChunk = {}
 
 const ShaderLib = {
 

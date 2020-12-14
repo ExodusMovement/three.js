@@ -1,9 +1,6 @@
 import { Material } from './Material.js';
 import { cloneUniforms } from '../renderers/shaders/UniformsUtils.js';
 
-import default_vertex from '../renderers/shaders/ShaderChunk/default_vertex.glsl.js';
-import default_fragment from '../renderers/shaders/ShaderChunk/default_fragment.glsl.js';
-
 /**
  * parameters = {
  *  defines: { "label" : "value" },
@@ -32,8 +29,8 @@ function ShaderMaterial( parameters ) {
 	this.defines = {};
 	this.uniforms = {};
 
-	this.vertexShader = default_vertex;
-	this.fragmentShader = default_fragment;
+	this.vertexShader = null;
+	this.fragmentShader = null;
 
 	this.linewidth = 1;
 
